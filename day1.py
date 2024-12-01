@@ -1,6 +1,5 @@
 # day one od AOC 2024
 import numpy as np
-import os
 
 # Import der Daten
 data = np.loadtxt('input_day1.txt')
