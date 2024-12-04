@@ -1,4 +1,4 @@
-# day one od AOC 2024
+# day one of AOC 2024
 import numpy as np
 
 # Import der Daten
