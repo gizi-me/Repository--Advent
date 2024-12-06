@@ -11,61 +11,61 @@ file = open('input_day3.txt','r')
 
 # define list where append multiplication parts
 
-# multi = []
+multi = []
 
 # go through lines and append every 12 entries, if 'mul' appears
 
-# for x in file:  # x is the line in the file
-#     x = x.replace(' ', '_')
-#     #print(x)
-#     # print(len(x))
-#     for i in range(0,len(x)-3): 
-#         if x[i:i+3] == 'mul':
-#             multi.append(x[i:i+12])
-#             #print(x[i:i+12])
+for x in file:  # x is the line in the file
+    x = x.replace(' ', '_')
+    #print(x)
+    # print(len(x))
+    for i in range(0,len(x)-3): 
+        if x[i:i+3] == 'mul':
+            multi.append(x[i:i+12])
+            #print(x[i:i+12])
 
-# print('length multi', len(multi))
+print('length multi', len(multi))
     
-# j = 0
+j = 0
 
-# while j < len(multi):
-#     element = multi[j]
-#     #print(element)
-#     if ',' and ')' in element:
-#         for i in range(0,12):
-#             if element[i] == ')':
+while j < len(multi):
+    element = multi[j]
+    #print(element)
+    if ',' and ')' in element:
+        for i in range(0,12):
+            if element[i] == ')':
                 
-#                 element = element[4:i]
+                element = element[4:i]
                 
-#                 break
-#         multi[j] = element
-#         j += 1
-#     else:
-#         del multi[j]
+                break
+        multi[j] = element
+        j += 1
+    else:
+        del multi[j]
 
     
 
-# print('länge jetzt', len(multi))
-# multi_ = []
+print('länge jetzt', len(multi))
+multi_ = []
 
-# for element in multi:
-#     #print('new',element)
-#     for i in range(0,len(element)):
-#         if element[i] == ',':
-#             # print(element)
+for element in multi:
+    #print('new',element)
+    for i in range(0,len(element)):
+        if element[i] == ',':
+            # print(element)
             
-#             x = int(element[:i])
+            x = int(element[:i])
            
-#             # print(x)
-#             y = int(element[i+1:])
-#             # print(y)
-#             multi_.append((x*y))
+            # print(x)
+            y = int(element[i+1:])
+            # print(y)
+            multi_.append((x*y))
 
 
-# #print (multi)
-# summe = sum(multi_)
+#print (multi)
+summe = sum(multi_)
 
-# print(summe)
+print(summe)
 
 # part two: do() enables, dont() stops__________________________________________________________________________________________
 
@@ -127,8 +127,8 @@ def do_dont(file):
     summe = sum(multi_2)
     return summe
 
-
-summe_part2 = do_dont('input_day3.txt')
+file = open('input_day3.txt', 'r')
+summe_part2 = do_dont(file)
 print('part two:', summe_part2)
 
 # for some reason the script does not work right now
